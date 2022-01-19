@@ -243,6 +243,7 @@ get_supported_versions () {
 }
 
 patch_common () {
+    PATH=$PATH:/opt/bin
     NVIDIA_SMI="$(command -v nvidia-smi || true)"
     if [[ ! "$NVIDIA_SMI" ]] ; then
         echo 'nvidia-smi utility not found. Probably driver is not installed.'
